@@ -1,0 +1,15 @@
+create table employee (ename varchar(20), ecode int, dep_name varchar2(20), salary int);
+insert into employee values ('Amit Ranjan', 342, 'Chemistry', 55000);
+insert into employee values ('Tania Yadav', 165, 'Physics', 52000);
+insert into employee values ('Bhuvan Trivedi', 131, 'Maths', 60000);
+insert into employee values ('Jashan Bansal', 311, 'Physics', 65000);
+insert into employee values ('Hemant Kohli', 214, 'Maths', 50000);
+insert into employee values ('Umang Verma', 234, 'Chemistry', 58000);
+insert into employee values ('Gunjan Kaur', 342, 'Maths', 48000);
+select * from employee;
+select count(ename) as Chemistry from employee where dep_name='Chemistry';
+select count(ename) as Maths from employee where dep_name='Maths';
+select count(ename) as Physics from employee where dep_name='Physics';
+select dep_name, count(*) from employee group by dep_name;
+select dep_name, avg(salary) from employee group by dep_name;
+select * from employee where salary=(select max(salary) from employee where dep_name='Physics');
