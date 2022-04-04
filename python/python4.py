@@ -1,10 +1,11 @@
-a = int(input("Enter 1st number: "))
-b = int(input("Enter 2nd number: "))
-c = int(input("Enter 3rd number: "))
-if(a>=b and a>=c):
-    largest = a
-elif(b>=c and b>=a):
-    largest = b
-elif(c>=a and c>=b):
-    largest = c
-print(largest, "is the largest number")
+d1 =  {'a': 100, 'b': 200, 'c':300}
+d2 =  {'a': 300, 'b': 200, 'd':400}
+d3 = {}
+print(d1)
+print(d2)
+for key1, value1 in d1.items():
+    for key2, value2 in d2.items():
+        if key1 == key2:
+            d3[key1] = value1 + value2
+print("\nDictionary after combining with same keys:")
+print(d3)
